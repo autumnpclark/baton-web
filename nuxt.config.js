@@ -11,6 +11,10 @@ export default {
     dir: 'docs'
   },
 
+  router: {
+    base: '/baton-web/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - relay',
