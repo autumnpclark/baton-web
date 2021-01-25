@@ -4,7 +4,7 @@
       <div class="text-center">
         <h1>RELAY</h1>
         <p>Your team is gonna be </p>
-        <h2>{{relay.timer}}</h2>
+        <h2>{{timer_txt}}</h2>
         <p>through a </p>
         <h2>{{relay.category}}</h2>
         <p>relay! Don't forget to </p>
@@ -27,9 +27,17 @@ export default {
   mounted() {
     this.proceed();
   },
+  computed: {
+      timer_txt() {
+          let timer = this.relay.timer.toString();
+          let text = global.timers[timer];
+          return text;
+      }
+
+  },
   methods: {
     proceed: async function() {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 5000));
         console.log("timer works")
             let response = await fetch(global.api_url + "/relay/" + global.relay.code)
             console.log("fetch works")

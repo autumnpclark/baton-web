@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     proceed: async function() {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 5000));
         console.log("timer works")
             let response = await fetch(global.api_url + "/relay/" + global.relay.code)
             console.log("fetch works")

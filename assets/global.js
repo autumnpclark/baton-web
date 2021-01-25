@@ -85,9 +85,32 @@ let global = {
     username: null,
     relay: null,
     challenges: {
-        "random": ['Do 10 Jumping Jacks', 'Plank for 20 seconds', 'Do 3 push-ups', 'Run in place for 30 seconds', 'See how long you can stand on one foot', 'Jump rope for 30 seconds (invisible jump ropes are fine)', 'Do 5 squats', 'Stretch your arms as high up as you can']
+        "physical": ['Do 10 Jumping Jacks while holding the baton', 'Plank for 20 seconds', 'Do 3 push-ups', 
+            'Run in place for 30 seconds', 'See how long you can stand on one foot', 
+            'Jump rope for 30 seconds (invisible jump ropes are fine)', 'Do 5 squats', 'Stretch your arms as high up as you can'],
+        "mental": ['Figure out how tall you are in centimeters', 'Learn how to say \'Hello, how are you?\' in Korean', 
+            'Write down your age in binary', 'Tap your name in morse code with the baton', 'Calculate how many pieces of paper you would need to stack on top of each other to reach the moon', 
+            'Find out what your state snack is', 'Identify 3 muscles in your face', 'Count to 5 in Swahili'],
+        "creative": ['Write your name in the air with the baton', 'Use the baton as a fishing pole and cast a line out! (Then hold still and see what bites...)', 
+            'Drum the rhythm of a favorite song with the baton', 'Draw a picture of your family with the baton held between your feet', 
+            'Sing the chorus of your favorite song into the baton', 'Take a super close up picture of something in the room and see if anyone can tell what it is', 
+            'Tap into your inner fashion designer and pick out a unique outfit for tomorrow', 'Use the baton to conduct an orchestra through a grand finale'],
+        "service": ['Text a compliment to someone you haven\'t seen in over a month', 'Call a grandparent', 'Write a nice note for someone who lives on your block', 
+            'Hold the baton as still as possible while you take 5 deep breaths', 'Point out a family member or roommate\'s best features to them (bonus points if you point with the baton)', 
+            'List 10 things you\'re grateful for', 'Take a picture of something that makes you happy and share it with someone else', 
+            'Look in a mirror (or camera) and list 5 reasons why you are super cool'],
+        "random": ['Do 10 Jumping Jacks while holding the baton', 'Learn how to say \'Hello, how are you?\' in Korean', 
+            'Sing the chorus of your favorite song into the baton', 'Hold the baton as still as possible while you take 5 deep breaths']
+    },
+    timers: {
+        "-1": "Zen",
+        "2": "Screaming",
+        "5": "Blazing",
+        "15": "Cruising",
+        "30": "Chillin\'"
     },
     api_url: "http://home.wigington.me"
+    // api_url: "http://localhost:3000"
 }
 
 let bleManager = new BluetoothManager(global);

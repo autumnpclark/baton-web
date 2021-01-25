@@ -3,6 +3,7 @@
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
         <h1>RELAY</h1>
+        <h2>Choose a category to compete in!</h2>
         <v-btn block id='physical' @click="proceed('physical')">
           Physical
         </v-btn>

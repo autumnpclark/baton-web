@@ -32,7 +32,7 @@ export default {
     continuous_update: async function() {
         while(this.update) {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            let response = await fetch(global.api_url = "/relay/" + global.relay.code)
+            let response = await fetch(global.api_url + "/relay/" + global.relay.code)
             
             global.relay = await response.json();
             

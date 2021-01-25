@@ -8,6 +8,8 @@
                 {{ user.name }}
             </li>
         </ul>
+        <p>Time Remaining</p>
+        <h2>{{time_remaining}}</h2>
         <v-btn
         class="ma-1"
         color="error"
@@ -50,6 +52,15 @@ export default {
               }
           }
           return print_names;
+      },
+      time_remaining() {
+          let elapsed = this.relay.status.challenge_time - Date.now()/1000
+          let remaining = this.relay.timer * 60 + elapsed
+          remaining = Math.floor(remaining)
+          let minutes = Math.floor(remaining/60)
+          let seconds = remaining - minutes * 60
+          let remaining_txt = minutes + " min " + seconds + " sec"
+          return remaining_txt
       }
   },
   mounted() {
@@ -62,7 +73,7 @@ export default {
     continuous_update: async function() {
         while(this.update) {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            let response = await fetch("http://localhost:3000/relay/" + global.relay.code)
+            let response = await fetch(global.api_url + "/relay/" + global.relay.code)
             global.relay = await response.json();
             this.relay = global.relay;
             if(global.relay.challenge_to_users[global.relay.status.challenge] === global.username) {
@@ -79,7 +90,7 @@ export default {
         }
     },
     proceed: async function (time) { 
-        let response = await fetch("http://localhost:3000/relay/" + global.relay.code,{
+        let response = await fetch(global.api_url + "/relay/" + global.relay.code,{
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
