@@ -109,7 +109,7 @@ let global = {
         "15": "Cruising",
         "30": "Chillin\'"
     },
-    api_url: "http://home.wigington.me"
+    api_url: "https://baton.autumnpajant.com"
     // api_url: "http://localhost:3000"
 }
 

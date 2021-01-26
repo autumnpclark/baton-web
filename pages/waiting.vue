@@ -48,8 +48,9 @@ export default {
             this.relay = global.relay;
         }
     },
-    proceed: async function (time) { 
-        let response = await fetch("http://localhost:3000/relay/" + global.relay.code,{
+    proceed: async function (time) {
+       
+        let response = await fetch(global.api_url + "/relay/" + global.relay.code,{
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
