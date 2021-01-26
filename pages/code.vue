@@ -2,13 +2,13 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <p>Fantastic! Your team's join code is</p>
-        <h2>{{relay.code}}</h2>
+        <h2 class="secondary--text">{{relay.code}}</h2>
         <p>Send this code to up to 7 teammates!</p>
         <v-btn
         class="ma-1"
-        color="grey"
+        color="secondary"
         @click="go_back"
       >
         Go Back
@@ -16,7 +16,7 @@
 
       <v-btn
         class="ma-1"
-        color="error"
+        color="primary"
         plain
         @click="proceed"
       >

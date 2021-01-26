@@ -2,22 +2,14 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <ul id="players">
             <li v-for="user in redacted_list" :key="user.id">
                 {{ user.name }}
             </li>
         </ul>
         <p>Time Remaining</p>
-        <h2>{{time_remaining}}</h2>
-        <v-btn
-        class="ma-1"
-        color="error"
-        plain
-        @click="proceed"
-      >
-        Let's Go!
-      </v-btn>
+        <h2 class="secondary--text">{{time_remaining}}</h2>
       </div>
     </v-col>
   </v-row>

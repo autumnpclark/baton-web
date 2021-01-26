@@ -2,9 +2,9 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <p>Welcome to Relay</p>
-        <h2>{{relay.code}}</h2>
+        <h2 class="secondary--text">{{relay.code}}</h2>
         <p>Hold tight while we assemble the rest of the team!</p>
       </div>
     </v-col>

@@ -2,12 +2,12 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <v-text-field id='code'
             label="join code"
             solo
           ></v-text-field>
-        <v-btn block v-on:click="join_team">
+        <v-btn block x-large color="secondary" v-on:click="join_team">
           Join!
         </v-btn>
       </div>

@@ -2,13 +2,13 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
-        <p>{{username}}</p>
+        <h1 class="primary--text">RELAY</h1>
+        <p class="secondary--text">{{username}}</p>
         <h2>YOU'RE UP!</h2>
 
       <v-btn
         class="ma-1"
-        color="error"
+        color="secondary"
         plain
         @click="proceed"
       >

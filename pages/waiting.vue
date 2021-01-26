@@ -2,7 +2,8 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
+        <h2 class="secondary--text">Waiting Room</h2>
         <ul id="players">
             <li v-for="user in relay.users" :key="user">
                 {{ user }}
@@ -10,7 +11,7 @@
         </ul>
         <v-btn
         class="ma-1"
-        color="error"
+        color="secondary"
         plain
         @click="proceed"
       >

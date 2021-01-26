@@ -2,13 +2,13 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <p>Your team is gonna be </p>
-        <h2>{{timer_txt}}</h2>
+        <h2 class="secondary--text">{{timer_txt}}</h2>
         <p>through a </p>
-        <h2>{{relay.category}}</h2>
+        <h2 class="primary--text">{{relay.category}}</h2>
         <p>relay! Don't forget to </p>
-        <h2>PASS the BATON!</h2>
+        <h2 class="secondary--text">PASS the BATON!</h2>
       </div>
     </v-col>
   </v-row>

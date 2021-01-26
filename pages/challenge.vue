@@ -2,15 +2,16 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
-        <p>{{username}}</p>
+        <h1 class="primary--text">RELAY</h1>
+        <p class="secondary--text">{{username}}</p>
         <p>Your challenge is:</p>
-        <h2> {{challenge_txt}} </h2>
+        <h2 class="primary--text"> {{challenge_txt}} </h2>
         <p>Time Remaining</p>
-        <h2>{{time_remaining}}</h2>
+        <h2 class="secondary--text">{{time_remaining}}</h2>
       <v-btn
         class="ma-1"
-        color="error"
+        color="secondary"
+        x-large
         plain
         @click="proceed"
       >

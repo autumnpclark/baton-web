@@ -2,26 +2,26 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 class="primary--text">RELAY</h1>
         <p>Choose a difficulty level!</p>
-        <v-btn block @click="proceed(-1)">
+        <v-btn block color="info" @click="proceed(-1)">
           Zen - No timer
         </v-btn>
-        <v-btn block id='mental' @click="proceed(30)">
+        <v-btn block color="primary" id='mental' @click="proceed(30)">
           Chillin' - 30 minutes/challenge
         </v-btn>
         <v-btn block id='creative' @click="proceed(15)">
           Cruising - 15 minutes/challenge
         </v-btn>
-        <v-btn block id='service' @click="proceed(5)">
+        <v-btn block color="secondary" id='service' @click="proceed(5)">
           Blazing - 5 minutes/challenge
         </v-btn>
-        <v-btn block id='random' @click="proceed(2)">
+        <v-btn block color="accent" id='random' @click="proceed(2)">
           Screaming - 2 minutes/challenge
         </v-btn>
         <v-btn
         class="ma-1"
-        color="grey"
+        color="secondary"
         @click="go_back"
       >
         Go Back

@@ -2,18 +2,18 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
+        <h1 color="primary" class="primary--text">RELAY</h1>
         <v-text-field id='username'
             label="username"
             solo
           ></v-text-field>
-        <v-btn block v-on:click="create_team_button">
+        <v-btn block color="primary" x-large v-on:click="create_team_button">
           Start a RELAY
         </v-btn>
-        <v-btn block v-on:click="join_local_team">
+        <v-btn block color="secondary" x-large v-on:click="join_local_team">
           Join a local team
         </v-btn>
-        <v-btn block>
+        <v-btn block x-large>
           Join a random team
         </v-btn>
       </div>

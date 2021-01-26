@@ -2,8 +2,8 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <h1>RELAY</h1>
-        <h2>SUCCESS!</h2>
+        <h1 class="primary--text">RELAY</h1>
+        <h2 class="secondary--text">SUCCESS!</h2>
         <p>You passed the baton! </p>
         <p>Don't forget to keep cheering on your teammates through their part of the relay!</p>
       </div>

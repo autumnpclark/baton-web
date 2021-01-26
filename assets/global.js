@@ -68,14 +68,18 @@ class BluetoothManager {
             let stage = STAGE_CONST[this.global.relay.status.stage];
             let challenge = this.global.relay.status.challenge
             let challenge_stage = CHALLENGE_STATE_CONST[this.global.relay.status.challenge_stage];
-            let timeLeft = 100;
+            let timeLeft = this.global.relay.timer * 60 + this.global.relay.status.challenge_time - Date.now()/1000;
+            timeLeft = Math.floor(timeLeft);
+            let i0 = timeLeft & 0xFF;
+            let i1 = (timeLeft >> 8) & 0xFF
+
 
             let isMyTurn = 0;
             if(!!this.global.relay.challenge_to_users && this.global.relay.challenge_to_users[challenge] === this.global.username) {
                 isMyTurn = 1;
             }
 
-            this.char.writeValue((new Uint8Array([stage, challenge, challenge_stage, 0, 0, isMyTurn])).buffer);
+            this.char.writeValue((new Uint8Array([stage, challenge, challenge_stage, i0, i1, isMyTurn])).buffer);
         }
     }
 }
